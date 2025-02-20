@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .approve-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .message {
+            color: #666;
+            margin: 1rem 0;
+        }
+        .approve-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        .approve-btn:hover {
+            background-color: #218838;
+        }
+        .deny-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: background-color 0.2s;
+        }
+        .deny-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="approve-container">
+        <h1>Approve Login Request</h1>
+        <p class="message">Login request from user: <strong>{{ username }}</strong></p>
+        <form action="/approve/{{ session_id }}" method="POST" style="display: inline;">
+            <button type="submit" class="approve-btn">Approve Login</button>
+        </form>
+        <a href="https://localhost:443" class="deny-btn">Deny</a>
+    </div>
+</body>
+</html> 
