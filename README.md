@@ -23,7 +23,7 @@ A secure Flask-based login system that implements SSL encryption and two-factor 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/Tahaoua/login_ssl.git)
 cd login_ssl
 ```
 
